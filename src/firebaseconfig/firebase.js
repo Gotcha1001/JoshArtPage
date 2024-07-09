@@ -3,13 +3,14 @@ import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInWithPopup, // Add signInWithPopup
   onAuthStateChanged,
   signOut,
   sendEmailVerification,
-  updateProfile, // Import updateProfile from firebase/auth
+  updateProfile,
 } from "firebase/auth";
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, Timestamp } from "firebase/firestore";
 
 // Your Firebase configuration
 const firebaseConfig = {
@@ -33,9 +34,12 @@ export {
   googleProvider,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  signInWithPopup, // Ensure signInWithPopup is exported
   onAuthStateChanged,
   signOut,
   sendEmailVerification,
-  updateProfile, // Ensure updateProfile is exported
+  updateProfile,
   db,
+  Timestamp,
+  GoogleAuthProvider,
 };
